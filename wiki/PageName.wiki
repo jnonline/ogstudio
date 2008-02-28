@@ -1,5 +1,5 @@
 #summary Собираем Ængine и Æditor.
-#labels Language-Russian,Category-Deploy
+#labels Language-Russian,Category-Deploy,Featured
 
 _Обновленная, исправленная и дополненная версия от 25 февраля 2008 года._
 
