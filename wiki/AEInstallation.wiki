@@ -1,12 +1,15 @@
-#Installation
-= Introduction =
+#labels Featured,Category-Support,Language-English
 
-Add your content here.
+= AEBasicHeaders installation =
 
+Get basicheaders source either from (link to code google) or from subversion:
+svn checkout https://osrpgcreation.svn.sf.net/svnroot/osrpgcreation/trunk/basicheaders
 
-= Details =
+Follow instructions in README.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= AELog installation =
+
+Get basicheaders source either from (link to code google) or from subversion:
+svn checkout https://osrpgcreation.svn.sf.net/svnroot/osrpgcreation/trunk/log
+
+Follow instructions in README.
