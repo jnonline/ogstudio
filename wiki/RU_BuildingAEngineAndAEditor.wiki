@@ -1,5 +1,5 @@
 #summary Собираем Ængine и Æditor.
-#labels Featured,Category-Deploy,Language-Russian
+#labels Deprecated,Category-Deploy,Language-Russian
 
 _Инструкция по сборке Ængine и Æditor.
 Обновленная, исправленная и дополненная версия от 25 февраля 2008 года._
