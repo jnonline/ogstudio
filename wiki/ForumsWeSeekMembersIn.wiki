@@ -4,7 +4,11 @@
 
 Here's the list of forums we post info about our project updates. We hope this will help us find new members for the team.
 
-= List =
-== Starter: kornerr ==
+= Mahjong =
+=== Starter: kornerr ===
 
 [http://blenderartists.org/forum/showthread.php?t=193593 Blender artists]
+
+[http://forum.deviantart.com/community/projects/1491174/ Deviant art]
+
+[http://www.gimptalk.com/forum/free-mahjong-game-in-development-any-help-on-visual-stuff--t50024.html GIMP talk]
