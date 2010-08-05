@@ -1,0 +1,10 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Here's the list of forums we post info about our project updates. We hope this will help us find new members for the team.
+
+= List =
+== Starter: kornerr ==
+
+[http://blenderartists.org/forum/showthread.php?t=193593 Blender artists]
