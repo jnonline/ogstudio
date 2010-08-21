@@ -1,3 +1,4 @@
+#labels Featured,Category-Deploy,Language-English
 *INSTALL*
 
 Michael Kapelko (kornerr AT GoogleMail)
@@ -400,7 +401,5 @@ Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/t
 }}}
 
 This will create Windows distribution of Mahjong within *C:/build/mj/mj-VERSION-windows32*, it will only contain executables, no resources.
-
-
 
 
