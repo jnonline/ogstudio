@@ -1,0 +1,406 @@
+*INSTALL*
+
+Michael Kapelko (kornerr AT GoogleMail)
+
+_20100821_
+
+
+= Dependencies' versions =
+
+Mahjong has been built against the following versions of dependencies:
+
+
+|| *Dependency* || *Version* ||
+|| OIS || 1.2.0 ||
+|| OGRE || 2281:70927bc62cdc ||
+|| CEGUI || svn of 2515 ||
+|| OpenAL Soft || 1.4.272 ||
+|| ALURE || git of 2010-05-23 ||
+|| OGS Sound || 31:61443e24feb2 ||
+
+= Linux build environment setup (Debian 5.x 32/64-bit) =
+
+Note: linux-headers is only necessary to compile VirtualBox additions.
+
+Install necessary packages by running:
+
+{{{
+aptitude install \
+    automake \
+    cmake \
+    freeglut3-dev \
+    g++ \
+    libexpat1-dev \
+    libfreeimage-dev \
+    libfreetype6-dev \
+    libgl1-mesa-dev \
+    linux-headers-`uname -r` \
+    libopenal-dev \
+    libpcre3-dev \
+    libtool \
+    libvorbis-dev \
+    libxaw7-dev \
+    libxrandr-dev \
+    make \
+    rsync
+}}}
+
+= 1. OIS =
+
+Get the latest [https://sourceforge.net/projects/wgois/files/ OIS].
+Install it by running:
+
+{{{
+./bootstrap
+./configure
+make
+make install
+}}}
+
+= 2. OGRE =
+
+Check out the latest OGRE version:
+
+{{{
+hg clone http://bitbucket.org/sinbad/ogre
+}}}
+Patch it with:
+
+ * [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/ogre/OgreGLXHiddenParam.patch OgreGLXHiddenParam.patch] window visibility fix
+ * [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/ogre/cmake-2.6.0.patch cmake-2.6.0.patch] to compile with old CMake
+
+{{{
+hg import <PATH_TO>/OgreGLXHiddenParam.patch
+hg import -f <PATH_TO>/cmake-2.6.0.patch
+}}}
+Install it by running:
+
+{{{
+cmake \
+-DOGRE_BUILD_COMPONENT_PAGING=OFF \
+-DOGRE_BUILD_COMPONENT_RTSHADERSYSTEM=OFF \
+-DOGRE_BUILD_COMPONENT_TERRAIN=OFF \
+-DOGRE_BUILD_PLUGIN_BSP=OFF \
+-DOGRE_BUILD_PLUGIN_OCTREE=OFF \
+-DOGRE_BUILD_PLUGIN_PCZ=OFF \
+-DOGRE_BUILD_PLUGIN_PFX=OFF \
+-DOGRE_BUILD_SAMPLES=OFF \
+-DOGRE_BUILD_TOOLS=OFF \
+-DOGRE_CONFIG_ALLOCATOR=1 \
+-DOGRE_CONFIG_CONTAINERS_USE_CUSTOM_ALLOCATOR=OFF \
+<PATH_TO_OGRE>
+make
+make install
+}}}
+
+= 3. CEGUI =
+
+Check out the latest [https://crayzedsgui.svn.sourceforge.net/svnroot/crayzedsgui/cegui_mk2/branches/v0-7 CEGUI].
+Install it by running:
+
+{{{
+./bootstrap
+./configure --with-default-xml-parser=ExpatParser
+make
+make install
+}}}
+
+= 4. ALURE =
+
+Check out the latest [http://repo.or.cz/w/alure.git ALURE].
+Install it by running:
+
+{{{
+cmake <PATH_TO_ALURE>
+make
+make install
+# Remove symlink and place real file. Necessary later.
+rm /usr/local/lib/libalure.so.1
+cp /usr/local/lib/libalure.so.1{.*,}
+}}}
+
+= 5. OGS Sound =
+
+Check out the latest [http://bitbucket.org/kornerr/sound OGSSound].
+Install it by running:
+
+{{{
+cmake -DBUILD_STATIC=OFF -DBUILD_TEST=OFF <PATH_TO_OGS_SOUND>
+make
+make install
+}}}
+
+= 6. Mahjong =
+
+Check out the latest [http://osrpgcreation.hg.sourceforge.net:8000/hgroot/mjin Mahjong].
+Compile it by running:
+
+{{{
+cmake <PATH_TO_MAHJONG>
+make
+}}}
+Strip all compiled libraries as root:
+
+{{{
+strip -g /usr/local/lib/{,OGRE/}*
+}}}
+Run [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/linux/mj.LinuxBuild mj.LinuxBuild]
+from where *mj-bin* is located.
+
+This will create Linux distribution of Mahjong within mj-VERSION-linuxARCH,
+it will only contain executables, no resources.
+
+= Windows build environment setup (XP 32-bit) =
+
+= 7. CMake =
+
+Install [http://cmake.org CMake-xxx-win32-x86.exe]
+
+At the *Install Options* screen select
+
+ * Add CMake to the system PATH for all users
+ * Create CMake Desktop Icon
+
+= 8. Cygwin =
+
+Install [http://www.cygwin.com setup.exe]
+
+The following packages must be installed in addition to the standard ones:
+
+ * rsync
+ * unzip
+
+Cygwin is used as a UNIX shell, MSYS replacement, not for compilation.
+
+= 9. MinGW =
+
+Create a new directory *C:/build/MinGW*. Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/MinGW.MinGWBuild MinGW.MinGWBuild]
+script into it. 
+
+Download [http://sourceforge.net/downloads/mingw/MinGW/BaseSystem/ MinGW base system]. Namely, the latest versions of the following files:
+
+ * binutils-xxx-mingw32-bin.tar.lzma
+ * gcc-c++-xxx-mingw32-bin.tar.lzma
+ * gcc-core-xxx-mingw32-bin.tar.lzma
+ * libgcc-xxx-mingw32-dll-1.tar.lzma
+ * libgmp-xxx-mingw32-dll-10.tar.lzma
+ * libmpc-xxx-mingw32-dll-2.tar.lzma
+ * libmpfr-xxx-mingw32-dll-1.tar.lzma
+ * libpthread-xxx-mingw32-dll-2.tar.lzma
+ * libstdc++-xxx-mingw32-dll-6.tar.lzma
+ * make-xxx-mingw32-bin.tar.lzma
+ * mingwrt-xxx-mingw32-dev.tar.gz
+ * mingwrt-xxx-mingw32-dll.tar.gz
+ * w32api-xxx-mingw32-dev.tar.gz
+
+Place them into *C:/build/MinGW/mingw* directory.
+
+Go to *C:/build/MinGW* and run the script
+(now and later it means to run the script from within Cygwin shell):
+
+{{{
+./MinGW.MinGWBuild
+}}}
+
+It will extract the above archives into *C:/MinGW* and copy mingw32-make.exe to make.exe for consistency.
+
+After that you must manually add *C:/MinGW/bin* to your %Path% and restart
+Cygwin shell.
+
+Additionally, download [http://alleg.sourceforge.net/files/dx80_mgw.zip dx80_mgw.zip] and copy its *include/dinput.h* file into *C:/MinGW/include*. This is necessary to compile OIS later.
+
+Also, download [http://www.emmestech.com/software/pexports-0.43/pexports-0.43.zip pexports] and copy its *bin/pexports.exe* file into *C:/MinGW/bin*. This is necessary to install Expat later.
+
+= 10. OGRE dependencies (FreeType, OIS, ZLib, ZZipLib) =
+
+Create a new directory *C:/build/OgreDeps* and go there.
+
+Check out the latest [http://bitbucket.org/cabalistic/ogredeps OgreDeps] version with [http://mercurial.selenic.com Mercurial] into *C:/build/OgreDeps/ogredeps*:
+
+{{{
+hg clone http://bitbucket.org/cabalistic/ogredeps
+}}}
+Go to *C:/build/OgreDeps/ogredeps* and patch it with [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/ogredeps/SHAREDFreetypeZLibZZipLib.patch SHAREDFreetypeZLibZZipLib.patch]
+to compile dynamic libraries instead of static ones:
+
+{{{
+hg import <PATH_TO>/SHAREDFreetypeZLibZZipLib.patch
+}}}
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/OgreDeps.MinGWBuild OgreDeps.MinGWBuild]
+script into *C:/build/OgreDeps*, go there and run it:
+
+{{{
+./OgreDeps.MinGWBuild
+}}}
+
+= 11. FreeImage (Additional OGRE dependency) =
+
+We do not use FreeImage from OgreDeps, because it doesn't link with OGRE
+when compiled dynamic. So we use the stock distribution.
+
+Create a new directory *C:/build/FreeImage*.
+
+Download the latest [http://freeimage.sourceforge.net/download.html FreeImage DLL (binary distribution)] into *C:/build/FreeImage*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/FreeImage.MinGWBuild FreeImage.MinGWBuild]
+script into *C:/build/FreeImage* (optionally edit the VERSION variable
+within the script), go there and run it:
+
+{{{
+./FreeImage.MinGWBuild
+}}}
+
+= 12. OGRE =
+
+Create a new directory *C:/build/Ogre* and go there.
+
+Check out the latest OGRE version:
+
+{{{
+hg clone http://bitbucket.org/sinbad/ogre
+}}}
+Go to *C:/build/Ogre/ogre* and patch it with:
+
+ * [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/ogre/LinkSharedFreeImage.patch LinkSharedFreeImage.patch]
+to use dynamic FreeImage
+ * [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/ogre/OgreFastBuild.patch OgreFastBuild.patch] to decrease MinGW build time
+
+{{{
+hg import <PATH_TO>/LinkSharedFreeImage.patch
+hg import -f <PATH_TO>/OgreFastBuild.patch
+}}}
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/Ogre.MinGWBuild Ogre.MinGWBuild]
+script into *C:/build/Ogre*, go there and run it:
+
+{{{
+./Ogre.MinGWBuild
+}}}
+
+= 13. Expat =
+
+Create a new directory *C:/build/Expat* and go there.
+
+Download the latest [https://sourceforge.net/projects/expat/files/expat_win32/2.0.1/expat-win32bin-2.0.1.exe/download Expat Windows build].
+
+Install it to default location.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/Expat.MinGWBuild Expat.MinGWBuild] script into *C:/build/Expat*
+(optionally edit the VERSION variable within the script), go there and
+run it:
+
+{{{
+./Expat.MinGWBuild
+}}}
+
+= 14. PCRE =
+
+Create a new directory *C:/build/PCRE*.
+
+Download the latest [https://sourceforge.net/projects/pcre/files/pcre/8.10/pcre-8.10.tar.bz2/download PCRE] into *C:/build/PCRE*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/PCRE.MinGWBuild PCRE.MinGWBuild]
+script into *C:/build/PCRE*, go there and run it:
+
+{{{
+./PCRE.MinGWBuild
+}}}
+
+= 15. CEGUI =
+
+Create a new directory *C:/build/CEGUI* and go there.
+
+Check out the latest CEGUI with SVN into *C:/build/CEGUI/cegui*:
+
+{{{
+svn co https://crayzedsgui.svn.sourceforge.net/svnroot/crayzedsgui/cegui_mk2/branches/v0-7 cegui
+}}}
+
+Copy [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/cegui/CMakeLists.txt CMakeLists.txt] into *C:/build/CEGUI/cegui*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/CEGUI.MinGWBuild CEGUI.MinGWBuild]
+into *C:/build/CEGUI*, go there and run it:
+
+{{{
+./CEGUI.MinGWBuild
+}}}
+
+= 16. OpenAL =
+
+Create a new directory *C:/build/OpenAL*.
+
+Download the latest [http://kcat.strangesoft.net/openal-soft-1.12.854-bin.zip OpenAL-Soft Windows build] into *C:/build/OpenAL*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/OpenAL.MinGWBuild OpenAL.MinGWBuild] script into *C:/build/OpenAL*
+(optionally edit the VERSION variable within the script), go there and
+run it:
+
+{{{
+./OpenAL.MinGWBuild
+}}}
+
+= 17. libsndfile =
+
+Create a new directory *C:/build/libsndfile*.
+
+Install the latest [http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.21-w32-setup.exe libsndfile Windows build] to default path.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/libsndfile.MinGWBuild libsndfile.MinGWBuild]
+script into *C:/build/libsndfile*
+(optionally edit the VERSION variable within the script), go there and
+run it:
+
+{{{
+./libsndfile.MinGWBuild
+}}}
+
+= 18. ALURE =
+
+Create a new directory *C:/build/ALURE*.
+
+Check out the latest [http://repo.or.cz/w/alure.git ALURE] with Git
+into *C:/build/ALURE/alure*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/ALURE.MinGWBuild ALURE.MinGWBuild]
+script into *C:/build/ALURE*, go there and run it:
+
+{{{
+./ALURE.MinGWBuild
+}}}
+
+= 19. OGS Sound =
+
+Create a new directory *C:/build/OGSSound*.
+
+Check out the latest [http://bitbucket.org/kornerr/sound OGSSound] with
+Mercurial into *C:/build/OGSSound/sound*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/OGSSound.MinGWBuild OGSSound.MinGWBuild]
+script into *C:/build/OGSSound*, go there and run it:
+
+{{{
+./OGSSound.MinGWBuild
+}}}
+
+= 20. libintl =
+
+Install the latest [http://gnuwin32.sourceforge.net/downlinks/libintl.php libintl] into *C:/MinGW*.
+
+= 21. Mahjong =
+
+Create a new director *C:/build/mj*.
+
+Check out the latest [http://osrpgcreation.hg.sourceforge.net:8000/hgroot/osrpgcreation Mahjong] with Mercurial into *C:/build/mj/mjin*.
+
+Put [http://osrpgcreation.hg.sourceforge.net/hgweb/osrpgcreation/mjin/raw-file/tip/ext/mingw/mj.MinGWBuild mj.MinGWBuild] script into *C:/build/mj*, go there
+(optionally edit the VERSION variable within the script) and run it:
+
+{{{
+./mj.MinGWBuild
+}}}
+
+This will create Windows distribution of Mahjong within *C:/build/mj/mj-VERSION-windows32*, it will only contain executables, no resources.
+
+
+
+
