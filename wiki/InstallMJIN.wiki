@@ -1,49 +1,39 @@
-'''INSTALL'''
+*INSTALL*
 
 Michael Kapelko (kornerr AT GoogleMail)
 
-''20110508''
+_20110508_
 
 
-== Dependencies' versions ==
+= Dependencies' versions =
 
 MJIN-0.7 was built against the following versions of dependencies:
 
-{| border="1" cellpadding="4"
-|-
-! Dependency !! Version !! Newer version works
-|-
-| OIS || 1.2.0 || No
-|-
-| OGRE || 2310:90f4a002251d || No
-|-
-| CEGUI || 2498:ce3f1bd08b58 || No
-|-
-| OpenAL Soft || 1.4.272 || Yes
-|-
-| ALURE || 1.1 || Yes
-|-
-| CMake Linux || 2.6 || Yes
-|-
-| CMake Windows || 2.8.3 || No
-|}
+|| *Dependency* || *Version* || *Newer version works* ||
+|| OIS || 1.2.0 || No ||
+|| OGRE || 2310:90f4a002251d || No ||
+|| CEGUI || 2498:ce3f1bd08b58 || No ||
+|| OpenAL Soft || 1.4.272 || Yes ||
+|| ALURE || 1.1 || Yes ||
+|| CMake Linux || 2.6 || Yes ||
+|| CMake Windows || 2.8.3 || No ||
 
-== 1. Linux build environment setup (Debian 5.0.8 32/64-bit DVD1 install) ==
+= 1. Linux build environment setup (Debian 5.0.8 32/64-bit DVD1 install) =
 
-=== Install additional packages ===
+== Install additional packages ==
 
 Note: linux-headers is only necessary to compile VirtualBox additions, only after
 installing additions do shared folders start to function.
 
 Add the following to sources.list right after the DVD entry:
 
-<pre>
+{{{
 deb http://ftp.de.debian.org/debian lenny main
-</pre>
+}}}
 
 Install necessary packages by running:
 
-<pre>
+{{{
 aptitude install \
     automake \
     cmake \
@@ -63,121 +53,119 @@ aptitude install \
     mercurial \
     make \
     rsync
-</pre>
+}}}
 
-=== Download necessary files ===
+== Download necessary files ==
 
-Create a new directory '''~/src'''. Put MJIN-0.7 sources into there, go to '''~/src/mjin-0.7/ext/linux''' and run:
+Create a new directory *~/src*. Put MJIN-0.7 sources into there, go to *~/src/mjin-0.7/ext/linux* and run:
 
-<pre>
+{{{
 ./download ~/src
-</pre>
+}}}
 
-It will download all files necessary to build MJIN-0.7 into '''~/src'''.
+It will download all files necessary to build MJIN-0.7 into *~/src*.
 
-=== Build all ===
+== Build all ==
 
-While in the same directory ('''ext/linux'''), run
+While in the same directory (*ext/linux*), run
 
-<pre>
+{{{
 ./install
-</pre>
+}}}
 
-It will build and install all necessary files, including MJIN-0.7, within '''~/build'''.
+It will build and install all necessary files, including MJIN-0.7, within *~/build*.
 
-== 2. Windows build environment setup (XP 32-bit install) ==
+= 2. Windows build environment setup (XP 32-bit install) =
 
-=== CMake ===
+== CMake ==
 
 Install [http://www.cmake.org/files/v2.8/cmake-2.8.3-win32-x86.exe CMake-2.8.3-win32-x86.exe]
 
-At the '''Install Options''' screen select
+At the *Install Options* screen select
 
-* Add CMake to the system PATH for all users
-* Create CMake Desktop Icon
+ * Add CMake to the system PATH for all users
+ * Create CMake Desktop Icon
 
-=== libsndfile ===
+== libsndfile ==
 
 Install [http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.21-w32-setup.exe libsndfile-1.0.21-w32-setup.exe] to default path.
 
-=== Add C:/MinGW/bin to %PATH% ===
+== Add C:/MinGW/bin to %PATH% ==
 
-You must do it before launching '''install''' script later.
+You must do it before launching *install* script later.
 
-=== Cygwin ===
+== Cygwin ==
 
 Install [http://cygwin.com/setup.exe Cygwin] without selecting additional
 packages.
 
 After that, install additional packages by running the following command:
 
-<pre>
+{{{
 setup.exe -P bz2,gz,mercurial,patch,rsync,subversion,vim,wget,unzip
-</pre>
+}}}
 
 It will run the same sequence of dialogs. Just keep on pressing "Next",
 and it will install everything as needed.
 
 Cygwin is used as a UNIX shell, and MinGW as a compiler.
 
-=== Download necessary files ===
+== Download necessary files ==
 
-Create a new directory '''C:/src'''. Put MJIN-0.7 sources into there, go to '''C:/src/mjin-0.7/ext/cygwin''' and run the script from within Cygwin shell:
+Create a new directory *C:/src*. Put MJIN-0.7 sources into there, go to *C:/src/mjin-0.7/ext/cygwin* and run the script from within Cygwin shell:
 
-<pre>
+{{{
 ./download C:/src
-</pre>
+}}}
 
-It will download all files necessary to build MJIN-0.7 into '''C:/src'''.
+It will download all files necessary to build MJIN-0.7 into *C:/src*.
 
-=== Build all ===
+== Build all ==
 
-While in the same directory ('''ext/cygwin'''), run
+While in the same directory (*ext/cygwin*), run
 
-<pre>
+{{{
 ./install
-</pre>
+}}}
 
-It will build and install all necessary files, including MJIN-0.7, within '''C:/build'''.
+It will build and install all necessary files, including MJIN-0.7, within *C:/build*.
 
-== 3. Addition packages for Linux distributions ==
+= 3. Addition packages for Linux distributions =
 
-=== Debian 6 ===
+== Debian 6 ==
 
 libopenal1 libfreeimage3
 
-=== Mint 10 ===
+== Mint 10 ==
 
 libfreeimage3
 
-=== Ubuntu 11.04 ===
+== Ubuntu 11.04 ==
 
 libopenal1 libfreeimage3
 
-=== Fedora 14 ===
+== Fedora 14 ==
 
 openal-soft freeimage
 
-=== openSUSE 11.4 ===
+== openSUSE 11.4 ==
 
 openal-soft libpcreposix0
 
 FreeImage:
 
-* 32-bit: [http://download.opensuse.org/repositories/games/openSUSE_11.4/i586/libfreeimage3-3.10.0-2.1.i586.rpm]
-* 64-bit: [http://download.opensuse.org/repositories/games/openSUSE_11.4/x86_64/libfreeimage3-3.10.0-2.1.x86_64.rpm]
+ * 32-bit: http://download.opensuse.org/repositories/games/openSUSE_11.4/i586/libfreeimage3-3.10.0-2.1.i586.rpm
+ * 64-bit: http://download.opensuse.org/repositories/games/openSUSE_11.4/x86_64/libfreeimage3-3.10.0-2.1.x86_64.rpm
 
-=== Mandriva 2010.02 ===
+== Mandriva 2010.02 ==
 
 openal (libfreeimage3 or lib64freeimage3)
 
-=== Arch 2010.05 ===
+== Arch 2010.05 ==
 
 openal freeimage libvorbis xdg-utils glut
 
-=== Slackware 13.37 ===
+== Slackware 13.37 ==
 
 openal freeimage
 
-<!-- wiki code generated by txt2tags 2.6 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags -i INSTALL -o /home/kornerr/InstallMJIN.wiki -t wiki -->
