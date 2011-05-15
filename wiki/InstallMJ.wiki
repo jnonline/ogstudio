@@ -1,3 +1,4 @@
+#labels Category-Deploy,Language-English,Featured
 *INSTALL*
 
 Michael Kapelko (kornerr AT GoogleMail)
@@ -31,4 +32,3 @@ Put Mahjong-0.7 sources into *C:/src/mj-0.7*, go into
 
 It will create Mahjong-0.7 distribution within
 *C:/build/mj-0.7/mj-0.7-windows32*.
-
