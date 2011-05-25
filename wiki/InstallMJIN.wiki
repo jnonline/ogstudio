@@ -89,7 +89,7 @@ At the *Install Options* screen select
 
 == libsndfile ==
 
-Install [http://www.mega-nerd.com/libsndfile/#Download libsndfile-1.0.21-w32-setup.exe] to default path.
+Download [http://www.mega-nerd.com/libsndfile/#Download libsndfile-1.0.21-w32-setup.exe] and install it to default path.
 
 == Add C:/MinGW/bin to %PATH% ==
 
