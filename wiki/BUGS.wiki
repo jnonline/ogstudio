@@ -7,4 +7,4 @@
 Unresolved issue: http://code.google.com/p/ogstudio/issues/detail?id=259
 
 2. Do not enable "Catalyst A.I" option in the video settings. You may get distorted picture:
-https://picasaweb.google.com/lh/photo/F-1zOS2bFz5rGxbUE_L5MA?feat=directlink
+https://picasaweb.google.com/lh/photo/F-1zOS2bFz5rGxbUE_L5MA?feat=directlink&nonsense=png
