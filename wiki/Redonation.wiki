@@ -82,5 +82,5 @@ OGS Mahjong 0.7 release.
 
 As a first step, I decided to donate to two major projects we use. And more for CEGUI just because CrazyEddie is very helpful.
 
-  * OGRE: $3.78
-  * CEGUI: €9.26
+  * OGRE: $3.78 (PayPal)
+  * CEGUI: €9.26 (Flattr)
