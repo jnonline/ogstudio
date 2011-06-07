@@ -40,6 +40,8 @@ Below is a list of projects and their use in OGS.
   * Doxygen
   Documentation.
   * [FreeType]
+  * gettext
+  Internationalization.
   * [GCC]
   * [gprof]
   * Make
