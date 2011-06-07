@@ -1,0 +1,7 @@
+#summary Unknown bugs
+#labels Category-Support,Language-English
+
+= ATI =
+
+1. If you start the game in FS native, then quit. Then restart it and change it to 640x480 FS, you may experience the whole desktop to go to 640x480.
+Unresolved issue: http://code.google.com/p/ogstudio/issues/detail?id=259
