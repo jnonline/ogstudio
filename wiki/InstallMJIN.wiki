@@ -98,7 +98,7 @@ You must do it before launching *install* script later.
 == Cygwin ==
 
 Install [http://cygwin.com/setup.exe Cygwin] without selecting additional
-packages.
+packages, but selecting at least 2 mirrors from which to download packages later.
 
 After that, install additional packages by running the following command:
 
