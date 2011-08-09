@@ -40,9 +40,9 @@ Below is a list of projects and their use in OGS.
   UNIX-like shell under Windows.
   * Doxygen
   Documentation.
+  * dpkg
+  Deb packages.
   * [FreeType]
-  * gettext
-  Internationalization.
   * [GCC]
   * [gprof]
   * Make
@@ -53,8 +53,6 @@ Below is a list of projects and their use in OGS.
   GCC compiler under Windows.
   * patch
   Patching sources to fit our needs.
-  * rsync
-  Copying around.
   * SVN
   Version control system for data.
   * vim
