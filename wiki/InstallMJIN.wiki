@@ -51,8 +51,7 @@ aptitude install \
     libxaw7-dev \
     libxrandr-dev \
     mercurial \
-    make \
-    rsync
+    make
 }}}
 
 == Download necessary files ==
@@ -102,7 +101,7 @@ packages, but selecting at least 2 mirrors from which to download packages later
 After that, install additional packages by running the following command:
 
 {{{
-setup.exe -P bz2,gz,mercurial,patch,rsync,subversion,vim,wget,unzip
+setup.exe -P bz2,gz,mercurial,patch,subversion,vim,wget,unzip
 }}}
 
 It will run the same sequence of dialogs. Just keep on pressing "Next",
