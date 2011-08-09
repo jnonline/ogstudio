@@ -1,9 +1,8 @@
-#labels Category-Deploy,Language-English,Featured
 *INSTALL*
 
 Michael Kapelko (kornerr AT GoogleMail)
 
-_20110508_
+_20110809_
 
 
 Mahjong-0.7 should be built against MJIN-0.7. 
@@ -32,3 +31,14 @@ Put Mahjong-0.7 sources into *C:/src/mj-0.7*, go into
 
 It will create Mahjong-0.7 distribution within
 *C:/build/mj-0.7/mj-0.7-windows32*.
+
+= Debug version =
+
+To build debug version of Mahjong-0.7, you should run the build scripts as follows:
+
+{{{
+./build debug
+}}}
+
+It will skip binary stripping stage.
+

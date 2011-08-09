@@ -1,9 +1,8 @@
-#labels Category-Deploy,Language-English,Featured
 *INSTALL*
 
 Michael Kapelko (kornerr AT GoogleMail)
 
-_20110508_
+_20110809_
 
 
 = Dependencies' versions =
@@ -12,8 +11,8 @@ MJIN-0.7 was built against the following versions of dependencies:
 
 || *Dependency* || *Version* || *Newer version works* ||
 || OIS || 1.2.0 || No ||
-|| OGRE || 2310:90f4a002251d || No ||
-|| CEGUI || 2498:ce3f1bd08b58 || No ||
+|| OGRE || 69c877112b1e || No ||
+|| CEGUI || ce3f1bd08b58 || No ||
 || OpenAL Soft || 1.4.272 || Yes ||
 || ALURE || 1.1 || Yes ||
 || CMake Linux || 2.6 || Yes ||
@@ -37,7 +36,7 @@ Install necessary packages by running:
 {{{
 aptitude install \
     automake \
-    cmake \
+    chrpath \
     freeglut3-dev \
     g++ \
     libexpat1-dev \
@@ -89,7 +88,7 @@ At the *Install Options* screen select
 
 == libsndfile ==
 
-Download [http://www.mega-nerd.com/libsndfile/#Download libsndfile-1.0.21-w32-setup.exe] and install it to default path.
+Install [http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.25-w32-setup.exe libsndfile-1.0.25-w32-setup.exe] to default path.
 
 == Add C:/MinGW/bin to %PATH% ==
 
@@ -169,3 +168,4 @@ openal freeimage libvorbis xdg-utils glut
 == Slackware 13.37 ==
 
 openal freeimage
+
