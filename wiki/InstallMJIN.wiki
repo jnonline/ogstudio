@@ -7,7 +7,7 @@ _20110809_
 
 = Dependencies' versions =
 
-MJIN-0.7 was built against the following versions of dependencies:
+Latest MJIN was built against the following versions of dependencies:
 
 || *Dependency* || *Version* || *Newer version works* ||
 || OIS || 1.2.0 || No ||
@@ -15,7 +15,7 @@ MJIN-0.7 was built against the following versions of dependencies:
 || CEGUI || ce3f1bd08b58 || No ||
 || OpenAL Soft || 1.4.272 || Yes ||
 || ALURE || 1.1 || Yes ||
-|| CMake Linux || 2.6 || Yes ||
+|| CMake Linux || 2.8.5 || Yes ||
 || CMake Windows || 2.8.3 || No ||
 
 = 1. Linux build environment setup (Debian 5.0.8 32/64-bit DVD1 install) =
@@ -57,13 +57,13 @@ aptitude install \
 
 == Download necessary files ==
 
-Create a new directory *~/src*. Put MJIN-0.7 sources into there, go to *~/src/mjin-0.7/ext/linux* and run:
+Create a new directory *~/src*. Put MJIN sources into there, go to *~/src/mjin/ext/linux* and run:
 
 {{{
 ./download ~/src
 }}}
 
-It will download all files necessary to build MJIN-0.7 into *~/src*.
+It will download all files necessary to build MJIN into *~/src*.
 
 == Build all ==
 
@@ -73,7 +73,7 @@ While in the same directory (*ext/linux*), run
 ./install
 }}}
 
-It will build and install all necessary files, including MJIN-0.7, within *~/build*.
+It will build and install all necessary files, including MJIN, within *~/build*.
 
 = 2. Windows build environment setup (XP 32-bit install) =
 
@@ -112,13 +112,13 @@ Cygwin is used as a UNIX shell, and MinGW as a compiler.
 
 == Download necessary files ==
 
-Create a new directory *C:/src*. Put MJIN-0.7 sources into there, go to *C:/src/mjin-0.7/ext/cygwin* and run the script from within Cygwin shell:
+Create a new directory *C:/src*. Put MJIN sources into there, go to *C:/src/mjin/ext/cygwin* and run the script from within Cygwin shell:
 
 {{{
 ./download C:/src
 }}}
 
-It will download all files necessary to build MJIN-0.7 into *C:/src*.
+It will download all files necessary to build MJIN into *C:/src*.
 
 == Build all ==
 
@@ -128,21 +128,9 @@ While in the same directory (*ext/cygwin*), run
 ./install
 }}}
 
-It will build and install all necessary files, including MJIN-0.7, within *C:/build*.
+It will build and install all necessary files, including MJIN, within *C:/build*.
 
 = 3. Addition packages for Linux distributions =
-
-== Debian 6 ==
-
-libopenal1 libfreeimage3
-
-== Mint 10 ==
-
-libfreeimage3
-
-== Ubuntu 11.04 ==
-
-libopenal1 libfreeimage3
 
 == Fedora 14 ==
 
