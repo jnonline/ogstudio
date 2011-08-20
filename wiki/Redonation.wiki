@@ -1,14 +1,5 @@
-#summary Nice tradition of wealth redistribution
+#summary Projects we use
 #labels Featured,Language-English
-
-= Introduction =
-
-In real life, parents raise children. Children later help parents when they become old.
-It's a distribution of help, law of conservation of energy, if you wish. First, you help others, then others help you.
-
-In open source world many projects seek donations, because it's very hard to work on something if you spend time on it, and it doesn't give you means for living.
-
-We decided to donate to projects we use directly each release.
 
 = Projects we use =
 Below is a list of projects and their use in OGS.
@@ -75,11 +66,11 @@ Below is a list of projects and their use in OGS.
   * Slackware
   * Ubuntu
 
-= Donations =
-== 2010-05-28 ==
-OGS Mahjong 0.7 release.
+= Nice tradition =
 
-As a first step, I decided to donate to two major projects we use. And more for CEGUI just because CrazyEddie is very helpful.
+In real life, parents raise children. Children later help parents when they become old.
+It's a distribution of help, law of conservation of energy, if you wish. First, you help others, then others help you.
 
-  * OGRE: $3.78 (PayPal)
-  * CEGUI: €9.26 (Flattr)
+In open source world many projects seek donations, because it's very hard to work on something if you spend time on it, and it doesn't give you means for living.
+
+We decided to donate to projects we use each release.
