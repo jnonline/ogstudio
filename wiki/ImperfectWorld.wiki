@@ -1,0 +1,22 @@
+#summary This is a collection of things that are imperfect for us
+
+= CEGUI editors =
+Outdated CELayoutEditor, CEImageEditor are:
+* hard to build (due to autotools).
+CEED is unusable for CEGUI 0.7 we use;
+* editing inconveniences;
+
+
+= CEGUI =
+
+No keyboard focus support.
+
+= C++ libraries in general =
+CEGUI depends on OGRE and won't work with other builds of OGRE.
+C libraries don't have that problem.
+
+I wonder if it's possible to have C library with everything in it and a small C++ library ontop of it which each project will compile itself.
+
+= OIS =
+
+Nothing newer than OIS-1.2 works under Linux.
