@@ -2,10 +2,9 @@
 
 = CEGUI editors =
 Outdated CELayoutEditor, CEImageEditor are:
-* hard to build (due to autotools).
-CEED is unusable for CEGUI 0.7 we use;
-* editing inconveniences;
-
+  * hard to build (due to autotools).
+  * editing inconveniences;
+CEED is unusable for CEGUI 0.7 we use.
 
 = CEGUI =
 
