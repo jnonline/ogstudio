@@ -31,7 +31,10 @@ MJIN:
  * Ogre::MaterialManager to manage themes;
  * Ogre::WindowEventUtitilies to accept RenderWindow events at desired times (each run cycle), to accept close/resize/focus change events;
  * Ogre::RenderWindow::FrameStats to get FPS and polycount statistics;
- * game window recreation capability without reloading resources which is achieved by hiding the first RenderWindow and displaying the second one.
+ * game window recreation capability without reloading resources which is achieved by hiding the first RenderWindow and displaying the second one;
+ * convenient material scripts even with inheritance;
+ * Blender OGRE script that converts meshes to XML format;
+ * OgreXMLConverter that converts XML mesh format to binary one understandble by Ogre::MeshManager.
 
 MJ:
  * Ogre::ResourceGroupManager to manage groups of resources (scenes/themes);
@@ -41,8 +44,7 @@ MJ:
  * Ogre::Viewport as a layer between Ogre::RenderWindow and Ogre::Camera, also allows to switch shadowing on/off;
  * Ogre::TextureFilterOptions for graphics quality settings;
  * Ogre::RenderTexture for RTT;
- * Ogre::ManualObject to draw Shisen-Sho path lines;
- * convenient material scripts even with inheritance.
+ * Ogre::ManualObject to draw Shisen-Sho path lines.
 
 = OIS =
 MJIN:
