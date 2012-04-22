@@ -16,6 +16,7 @@ MJIN:
  * Ogre::RenderWindow for display and input;
  * Ogre::RenderSystemCapabilities to get info about OpenGL and videocard;
  * Ogre::StringConverter to convert int/float to String and vice versa;
+ * Ogre::StringUtil for simple pattern matching, string replacing, splitting by token
  * Ogre::Texture(Ptr) for render to texture of CEGUI;
  * Ogre::Camera to view scene, to switch shadowing on/off;
  * Ogre::SceneManager to manage nodes;
@@ -29,4 +30,15 @@ MJIN:
  * Ogre::Light for lights (we use point light);
  * Ogre::MaterialManager to manage themes;
  * Ogre::WindowEventUtitilies to accept RenderWindow events at desired times (each run cycle), to accept close/resize/focus change events;
- * Ogre::RenderWindow::FrameStats to get FPS and polycount statistics.
+ * Ogre::RenderWindow::FrameStats to get FPS and polycount statistics;
+ * game window recreation capability without reloading resources which is achieved by hiding the first RenderWindow and displaying the second one.
+
+MJ:
+ * Ogre::ResourceGroupManager for manager groups of resources (scenes/themes);
+ * MJ LayoutManager resigered as OgreResourceManager for easy layout handling;
+ * Ogre::OverlayManager to display background for menu, lose/win screens;
+ * Ogre::Ray/SceneQuery/Result to select object by mouse clicks (ray tracing);
+ * Ogre::Viewport as a layer between Ogre::RenderWindow and Ogre::Camera;
+ * Ogre::TextureFilterOptions for graphics quality settings;
+ * Ogre::RenderTexture for RTT;
+ * Ogre::ManualObject to draw Shisen-Sho path lines.
