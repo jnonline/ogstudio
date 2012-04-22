@@ -54,4 +54,24 @@ MJIN:
 
 = CEGUI =
 MJIN:
- * 
+ * CEGUI::MultiColumnList for table-like display;
+ * CEGUI::ListBox (with possibility to center contents);
+ * CEGUI::Combobox;
+ * CEGUI::Window for static text windows (descriptions);
+ * CEGUI::PushButton;
+ * CEGUI::Key/Window/EventArgs for key/window/general events;
+ * CEGUI::Key enum;
+ * CEGUI::Event::Subscriber for subscribing to events;
+ * CEGUI::Editbox;
+ * CEGUI::Scrollbar;
+ * CEGUI::WindowManager to manage windows/dialogs;
+ * CEGUI::utf8 to convert C strings to CEGUI ones;
+ * CEGUI::String to represent GUI strings;
+ * Redirecting CEGUI internal logging to Mahjong log;
+ * Recreating GUI after recreating second Ogre::RenderWindow used for display;
+ * CEGUI fonts/imagesets/layouts/looknfeel/schemes all handled by CEGUI Ogre resource manager without a problem;
+ * CEGUI::MouseCursor;
+ * CEGUI::OgreRenderer for easy CEGUI Ogre integration;
+ * CEGUI::Texture/Imageset for RTT;
+ * CEGUI::Right/Middel/LeftButton for mouse buttons;
+ * Injecting key/mouse events into CEGUI;
