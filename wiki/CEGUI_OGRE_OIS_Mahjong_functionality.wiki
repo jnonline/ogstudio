@@ -42,3 +42,16 @@ MJ:
  * Ogre::TextureFilterOptions for graphics quality settings;
  * Ogre::RenderTexture for RTT;
  * Ogre::ManualObject to draw Shisen-Sho path lines.
+
+= OIS =
+MJIN:
+ * OIS::InputManager/Keyboard/Mouse to create/manage keyboard and mouse listeners;
+ * OIS::Key/MouseEvent;
+ * OIS::MouseButtonID;
+ * Key enum values;
+ * keyPress/Release;
+ * mouseMove/Press/Release.
+
+= CEGUI =
+MJIN:
+ * 
