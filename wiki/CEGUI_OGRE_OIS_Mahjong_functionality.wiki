@@ -41,7 +41,8 @@ MJ:
  * Ogre::Viewport as a layer between Ogre::RenderWindow and Ogre::Camera, also allows to switch shadowing on/off;
  * Ogre::TextureFilterOptions for graphics quality settings;
  * Ogre::RenderTexture for RTT;
- * Ogre::ManualObject to draw Shisen-Sho path lines.
+ * Ogre::ManualObject to draw Shisen-Sho path lines;
+ * convenient material scripts even with inheritance.
 
 = OIS =
 MJIN:
