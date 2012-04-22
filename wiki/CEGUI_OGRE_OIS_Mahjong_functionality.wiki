@@ -74,4 +74,9 @@ MJIN:
  * CEGUI::OgreRenderer for easy CEGUI Ogre integration;
  * CEGUI::Texture/Imageset for RTT;
  * CEGUI::Right/Middel/LeftButton for mouse buttons;
- * Injecting key/mouse events into CEGUI;
+ * Injecting key/mouse events into CEGUI.
+
+MJ:
+ * CEGUI::Image for RTT;
+ * CEGUI::UVector2/URect/UDim for relational widget positioning;
+ * CEGUI::FontManager/ImagesetManager for re-scaling GUI after game window resize.
