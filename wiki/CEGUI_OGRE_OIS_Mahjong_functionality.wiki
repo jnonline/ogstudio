@@ -1,0 +1,14 @@
+#summary This document collects all functionality Mahjong uses from CEGUI, OGRE, OIS libraries.
+
+= Introduction =
+
+As Mahjong 1.0 approaches, I have a wish to try out other engines to see if they possibly fit better than what we use. To speed up the process, I need to know what we use exactly.
+
+= OGRE =
+MJIN:
+ * Ogre::Singleton template;
+ * OGRE internal logging into Mahjong log;
+ * Ogre::String type (aka typedef std::string);
+ * Ogre::ConfigFile class for reading INI-like files;
+
+ 
