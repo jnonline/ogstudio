@@ -7,8 +7,26 @@ As Mahjong 1.0 approaches, I have a wish to try out other engines to see if they
 = OGRE =
 MJIN:
  * Ogre::Singleton template;
- * OGRE internal logging into Mahjong log;
+ * Ogre::LogManager to redirect OGRE internal logging into Mahjong log;
  * Ogre::String type (aka typedef std::string);
- * Ogre::ConfigFile class for reading INI-like files;
-
- 
+ * Ogre::ConfigFile to read INI-like files;
+ * Ogre::DataStream(Ptr) to manage sound streams as Ogre resources;
+ * Ogre::Resource to manage sound buffers (small sound files like Click.ogg) as Ogre resources;
+ * Ogre::ResourceManager to manage sound resources in Ogre resource system;
+ * Ogre::RenderWindow for display and input;
+ * Ogre::RenderSystemCapabilities to get info about OpenGL and videocard;
+ * Ogre::StringConverter to convert int/float to String and vice versa;
+ * Ogre::Texture(Ptr) for render to texture of CEGUI;
+ * Ogre::Camera to view scene, to switch shadowing on/off;
+ * Ogre::SceneManager to manage nodes;
+ * Ogre::Vector3 for position;
+ * Ogre::Quaternion for rotation;
+ * Ogre::Degree to convert degree to radian for rotation;
+ * Ogre::SceneNode/Entity to present visual entities like tiles, environment, etc which are able to pitch/yaw/roll;
+ * Ogre::ColourValue to represent RGBA colour of lighting, material colour, etc.;
+ * Ogre::MeshManager to manage scenes;
+ * Ogre::Skybox/dome for skybox/dome;
+ * Ogre::Light for lights (we use point light);
+ * Ogre::MaterialManager to manage themes;
+ * Ogre::WindowEventUtitilies to accept RenderWindow events at desired times (each run cycle), to accept close/resize/focus change events;
+ * Ogre::RenderWindow::FrameStats to get FPS and polycount statistics.
