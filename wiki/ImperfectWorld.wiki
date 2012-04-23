@@ -11,7 +11,7 @@ CEED is unusable for CEGUI 0.7 we use.
 No keyboard focus support.
 
 = C++ libraries in general =
-CEGUI depends on OGRE and won't work with other builds of OGRE.
+OGRE doesn't have stable ABI from version to version, this puts a strict dependency on CEGUI being compiled against certain OGRE version.
 C libraries don't have that problem.
 
 I wonder if it's possible to have C library with everything in it and a small C++ library ontop of it which each project will compile itself.
