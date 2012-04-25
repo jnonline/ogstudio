@@ -12,3 +12,6 @@ Unresolved issue: http://code.google.com/p/ogstudio/issues/detail?id=259
 2. Do not enable "Catalyst A.I" option in the video settings. You may get distorted picture:
 
 https://lh3.googleusercontent.com/-B5ICn1I-6lQ/Te4dDFTU4MI/AAAAAAAAANc/5DlOKzt9YQc/s640/mj_ati_ai.jpg
+
+= Nouveau = 
+GeForce4 Ti 4400 is known not to work with Nouveau drivers, it crashes OGRE.
