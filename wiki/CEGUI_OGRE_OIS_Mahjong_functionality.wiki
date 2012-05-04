@@ -67,6 +67,7 @@ MJIN:
  * CEGUI::Event::Subscriber for subscribing to events;
  * CEGUI::Editbox;
  * CEGUI::Scrollbar;
+ * Scrolled area that we fill with text and it adds Scrollbar;
  * CEGUI::WindowManager to manage windows/dialogs;
  * CEGUI::utf8 to convert C strings to CEGUI ones;
  * CEGUI::String to represent GUI strings;
