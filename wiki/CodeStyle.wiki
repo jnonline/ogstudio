@@ -5,14 +5,14 @@
 All listed requirements either add new requirements, or override existing ones of [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml Google C++ style guide]. Therefore you should first read Google C++ style guide.
 
 = Naming =
-== General Naming Rules ==
+== General naming rules ==
 
 It's best to name correctly, unambiguously and without abbreviation if possible. Though, if file scope is pretty small, we don't mind abbreviations
 {{{
 OGOFilmInfoPage *mFIP; // Ok in a small scope file.
 }}}
 
-== File Names ==
+== File names ==
 
 Header C++ files have .h extension (not hpp).
 
@@ -30,3 +30,26 @@ Lower case is allowed only in special cases:
 {{{
 endian.h // For endian convertions
 }}}
+
+== Type names ==
+
+Classes, structs, typedefs:
+{{{
+class TileStateMoving {
+};
+
+struct Item {
+};
+
+typedef std::vector<Item> Items;
+}}}
+
+Enums:
+{{{
+enum TILE_STATE {
+  TS_MOVING,
+  TS_HIDING
+};
+}}}
+
+Enums should be located in Common.h like file, not nested into a class, if they are used in different files. Although, it's ok to nest Enum inside a private section if it's only used internally inside the class.
