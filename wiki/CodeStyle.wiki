@@ -81,3 +81,9 @@ class TileStateMoving {
 {{{
 TileStateMoving *gTileStateMoving;
 }}}
+
+=== Constant names ===
+Uppercase with underscores:
+{{{
+const u16 MAX_STRLEN = 1024;
+}}}
