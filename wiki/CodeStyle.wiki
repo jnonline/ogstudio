@@ -65,16 +65,19 @@ Class member variables start with 'm' and then camel case.
 Global variables start with 'g' and then camel case.
 {{{
 int localVariable;
-- - - -
+}}}
+{{{
 struct BinFormat {
   int           formatVersion;
   unsigned char formatMagic;
 };
-- - - -
+}}}
+{{{
 class TileStateMoving {
   private:
     int mMemberVariable;
 };
-- - - -
+}}}
+{{{
 TileStateMoving *gTileStateMoving;
 }}}
