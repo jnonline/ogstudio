@@ -1,5 +1,7 @@
 #summary CodeStyle for Opensource Game Studio projects.
 
+<wiki:toc max_depth="2" />
+
 = Introduction =
 
 All listed requirements either add new requirements, or override existing ones of [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml Google C++ style guide]. Therefore you should first read Google C++ style guide.
@@ -53,3 +55,26 @@ enum TILE_STATE {
 }}}
 
 Enums should be located in Common.h like file, not nested into a class, if they are used in different files. Although, it's ok to nest Enum inside a private section if it's only used internally inside the class.
+
+=== Variable names ===
+
+Local variables and struct ones use camel case.
+
+Class member variables start with 'm' and then camel case.
+
+Global variables start with 'g' and then camel case.
+{{{
+int localVariable;
+- - - -
+struct BinFormat {
+  int           formatVersion;
+  unsigned char formatMagic;
+};
+- - - -
+class TileStateMoving {
+  private:
+    int mMemberVariable;
+};
+- - - -
+TileStateMoving *gTileStateMoving;
+}}}
