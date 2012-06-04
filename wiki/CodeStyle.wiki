@@ -87,3 +87,16 @@ Uppercase with underscores:
 {{{
 const u16 MAX_STRLEN = 1024;
 }}}
+
+=== Function names ===
+
+Function names use camel case and should be verbs:
+{{{
+void doSomethingSpecial()
+}}}
+{{{
+class SomethingSpecial {
+  public:
+    void doItNow();
+}
+}}}
