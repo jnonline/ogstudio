@@ -17,6 +17,7 @@ This is how OGS toolset should look like in 2014.
  * Indirect-free code
   # Don't use singletons, pass necessary things explicitly [http://code.google.com/p/ogstudio/issues/detail?id=304 (Issue)]
  * Explicitly forbid unused constructor and copy-constructor [http://code.google.com/p/ogstudio/issues/detail?id=465 (Issue)]
+ * Render within Qt [http://code.google.com/p/ogstudio/issues/detail?id=379 (Issue)]
 
 = Game (Mahjong 2.0, Shuan 1.0) =
 
