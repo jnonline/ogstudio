@@ -1,0 +1,30 @@
+#summary OGS toolset plan.
+
+= Introduction =
+
+This is how OGS toolset should look like in 2014.
+
+= MJIN2 =
+
+ * Is written in C++ without exposing its dependencies like MJIN1 does.
+  # Removes the burden of dependencies from the end game.
+  # Allows to completely control the interface: no more different styles of code formatting imposed by dependencies.
+ * Python interface is provided by SWIG.
+  # Allows to generate interface to Lua, Java, C# and many other languages.
+  # Uses low level binding, e.g., Python.h for Python which means SWIG is only compile time dependency, not runtime one (like Boost.Python).
+  # SWIG2 also has “-builtin” compile flag which gives about 2X speed up compared to the default method (and all other existing Python bindings).
+ * Lightweight X11/WinAPI GUI that allows to display Splash, MessageBox with translations.
+ * Indirect-free code
+  # Don't use singletons, pass necessary things explicitly [http://code.google.com/p/ogstudio/issues/detail?id=304 (Issue)]
+
+= Game (Mahjong 2.0, Shuan 1.0) =
+
+ * Is written entirely in Python, if possible.
+ * May use C++ as a base for critical Python modules. Although, if possible, it should be placed to MJIN2 code base.
+ * Should be able to be instantiated from inside the Editor to allow realtime editing.
+
+= Editor =
+
+ * Python + Qt (PyQt4 or PySide).
+ * Directly uses MJIN2 through Python interface.
+ * Should be able to instantiate Game to allow realtime editing.
