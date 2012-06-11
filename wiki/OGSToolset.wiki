@@ -13,9 +13,8 @@ This is how OGS toolset should look like in 2014.
   # Allows to generate interface to Lua, Java, C# and many other languages.
   # Uses low level binding, e.g., Python.h for Python which means SWIG is only compile time dependency, not runtime one (like Boost.Python).
   # SWIG2 also has “-builtin” compile flag which gives about 2X speed up compared to the default method (and all other existing Python bindings).
- * Lightweight X11/WinAPI GUI that allows to display Splash, MessageBox with translations.
- * Indirect-free code
-  # Don't use singletons, pass necessary things explicitly [http://code.google.com/p/ogstudio/issues/detail?id=304 (Issue)]
+ * Lightweight X11/WinAPI GUI that allows to display Splash, MessageBox with translations [http://code.google.com/p/ogstudio/issues/detail?id=149 (Issue)]
+ * Indirect-free code: don't use singletons, pass necessary things explicitly [http://code.google.com/p/ogstudio/issues/detail?id=304 (Issue)]
  * Explicitly forbid unused constructor and copy-constructor [http://code.google.com/p/ogstudio/issues/detail?id=465 (Issue)]
  * Render within Qt [http://code.google.com/p/ogstudio/issues/detail?id=379 (Issue)]
 
