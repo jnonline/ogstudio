@@ -118,3 +118,10 @@ class Application {
 } // namespace mj
 }}}
 must be located in mj/Application.h.
+
+= Platform dependent code =
+
+Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
+{{{
+//! Platform dependent implementation.
+}}}
