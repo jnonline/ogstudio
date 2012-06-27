@@ -58,6 +58,11 @@ enum TILE_STATE {
 
 Enums should be located in Common.h like file, not nested into a class, if they are used in different files. Although, it's ok to nest Enum inside a private section if it's only used internally inside the class.
 
+Private classes used to hide dependency should be named like ClassName_p:
+{{{
+class RegExp_p
+}}}
+
 === Variable names ===
 
 Local variables and struct ones use camel case.
