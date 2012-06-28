@@ -63,7 +63,7 @@ Private classes used to hide dependency should be named like ClassName_p:
 class RegExp_p
 }}}
 
-=== Variable names ===
+== Variable names ==
 
 Local variables and struct ones use camel case.
 
@@ -89,13 +89,13 @@ class TileStateMoving {
 TileStateMoving *gTileStateMoving;
 }}}
 
-=== Constant names ===
+== Constant names ==
 Uppercase with underscores:
 {{{
 const u16 MAX_STRLEN = 1024;
 }}}
 
-=== Function names ===
+== Function names ==
 
 Function names use camel case and should be verbs:
 {{{
@@ -108,7 +108,7 @@ class SomethingSpecial {
 };
 }}}
 
-=== Namespace names ===
+== Namespace names ==
 
 So far they are lowercase and one word long.
 
@@ -124,14 +124,14 @@ class Application {
 }}}
 must be located in mj/Application.h.
 
-=== Macros ===
+== Macros ==
 
 {{{
 #define THIS_IS_A_MACRO(X) std::cout << X << std::endl;
 }}}
 
-== Comments ==
-=== File comments ===
+= Comments =
+== File comments ==
 For MJIN2, use the following copyright notice at the top of the .h and .cpp files:
 {{{
 /*
