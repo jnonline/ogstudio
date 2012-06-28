@@ -124,6 +124,12 @@ class Application {
 }}}
 must be located in mj/Application.h.
 
+=== Macros ===
+
+{{{
+#define THIS_IS_A_MACRO(X) std::cout << X << std::endl;
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
