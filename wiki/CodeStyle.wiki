@@ -130,6 +130,28 @@ must be located in mj/Application.h.
 #define THIS_IS_A_MACRO(X) std::cout << X << std::endl;
 }}}
 
+== Comments ==
+=== File comments ===
+For MJIN2, use the following copyright notice at the top of the .h and .cpp files:
+{{{
+/*
+This file is part of MJIN2.
+
+MJIN2 is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MJIN2 is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MJIN2.  If not, see <http://www.gnu.org/licenses/>.
+*/
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
