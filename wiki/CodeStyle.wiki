@@ -152,6 +152,28 @@ along with MJIN2.  If not, see <http://www.gnu.org/licenses/>.
 */
 }}}
 
+== Class comments ==
+
+Every class definition should have an accompanying comment that describes what it is for and how it should be used:
+{{{
+//! Regular expression matcher.
+/*! Example:
+ *  \code
+ *  RegExp re("\n|\t");
+ *  StringList sl;
+ *  sl.push_back("A dog\nand cat");
+ *  sl.push_back("A bird,\ta mole");
+ *  sl.push_back("A man without a cat");
+ *  for (StringList::iterator it = sl.begin(); it != sl.end(); ++it)
+ *      if (re.exec(*it))
+ *          std::cout << *it << std::endl;
+ *  \endcode
+ *  The example will only print the first two lines.
+ *  The third one doesn't match the specified regular expression.
+ */
+class RegExp {
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
