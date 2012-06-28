@@ -51,8 +51,8 @@ typedef std::vector<Item> Items;
 Enums:
 {{{
 enum TILE_STATE {
-  TS_MOVING,
-  TS_HIDING
+  TILE_STATE_MOVING,
+  TILE_STATE_HIDING
 };
 }}}
 
