@@ -183,6 +183,45 @@ Exception: URL or other data that must be preserved.
 == Spaces vs. tabs ==
 Only use spaces. Tab = 4 spaces.
 
+== Function declarations and definitions ==
+Return type on the same line as function name, parameters on the same line if they fit:
+{{{
+void Class::function(int param) throw () {
+    . . .
+}
+}}}
+If parameters don't fit, align them:
+{{{
+void Class::method(const &param1,
+                   int   param2) throw () {
+    . . .
+}
+}}}
+If even the first parameter doesn't fit, start on the next line:
+{{{
+void Class::method(
+    int param1,
+    int param2) throw (std::exception) {
+    . . .
+}
+}}}
+
+Note: 
+ * The return type is always on the same line as the function name. 
+ * The open parenthesis is always on the same line as the function name. 
+ * There is never a space between the function name and the open parenthesis. 
+ * There is never a space between the parentheses and the parameters. 
+ * The open curly brace is always at the end of the same line as the last parameter. 
+ * The close curly brace is either on the last line by itself or on the same line as the open curly brace if the definition is empty.
+ * There should be a space between the close parenthesis and the open curly brace. 
+ * All parameters should be named, with identical names in the declaration and implementation. 
+ * All parameters should be aligned if placed across several lines.
+ * Always specify what function may throw, this allows SWIG to generate correct target language exception handling.
+
+If the function is const, the const keyword should be on the same line as the last parameter.
+
+If some parameters are unused, comment out the variable name in the function definition, not declaration.
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
