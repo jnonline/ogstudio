@@ -180,6 +180,9 @@ Maximum line length is 80 characters, because it simplifies comparison of 2 code
 
 Exception: URL or other data that must be preserved.
 
+== Spaces vs. tabs ==
+Only use spaces. Tab = 4 spaces.
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
