@@ -282,6 +282,31 @@ switch (a) {
 }
 }}}
 
+== Pointer and reference expressions ==
+
+No spaces around period or arrow. Pointer operators do not have trailing spaces.
+{{{
+x = *p;
+p = &x;
+x = r.y;
+x = r->y;
+}}}
+When declaring a pointer variable or argument, you should place the asterisk adjacent to the variable, not type:
+{{{
+char *c;
+const string &str;
+}}}
+This is because asterisk belongs to a variable, not type:
+{{{
+char* c, d;
+}}}
+Here c is a pointer, but d is not! So we forbid such confusion in the first place.
+
+As for returning pointers/references, they should be placed adjacent to the type:
+{{{
+const char* str()
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
