@@ -342,7 +342,7 @@ class A: public B,
         bool isSomething() const;
 
     private:
-      bool mIsSomething;
+        bool mIsSomething;
 };
 }}}
 
