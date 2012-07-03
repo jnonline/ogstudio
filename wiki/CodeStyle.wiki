@@ -257,6 +257,31 @@ if (true)
     doSomething();
 }}}
 
+== Loops and switch statements ==
+
+Loops should use prefix ++ operator, because otherwise temporary variable is created to hold return value.
+{{{
+for (StringList::iterator it = mList.begin(); it != mList.end(); ++it) {
+    . . .
+}}}
+case blocks in switch statements should only have curly braces if it's required by compilator, i.e., to create a variable, and they should be placed like show below.
+switch statements should raise exception in default case in case unsupported value is provided.
+{{{
+switch (a) {
+    case 1:
+        b = a;
+        break;
+    case 2: {
+        RegExp re("abc");
+        if (re.match("Wow"))
+            b = a - 1;
+        break;
+    }
+    default:
+        MJIN2_EXCEPTION("Invalid parameter", MJIN2_STR("%u", a));
+}
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
