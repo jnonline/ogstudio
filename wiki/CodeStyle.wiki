@@ -259,7 +259,7 @@ if (true)
 
 == Loops and switch statements ==
 
-Loops should use prefix ++ operator, because otherwise temporary variable is created to hold return value.
+Loops should use prefix ++ operator, because otherwise temporary variable is created to hold return value each cycle iteration:
 {{{
 for (StringList::iterator it = mList.begin(); it != mList.end(); ++it) {
     . . .
