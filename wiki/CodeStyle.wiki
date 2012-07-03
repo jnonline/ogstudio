@@ -316,6 +316,16 @@ if (abc                >  other &&
     . . .
 }}}
 Also, use &&, ||, etc. instead of and, or, etc. keywords.
+== Preprocessor directives ==
+# is always put at the beginning of the line:
+{{{
+if (abc) {
+#ifdef DEBUG
+    std::cout << "abc called\n";
+#endif
+    doSomething()
+    . . .
+}}}
 
 = Platform dependent code =
 
