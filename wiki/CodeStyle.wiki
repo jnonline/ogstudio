@@ -315,7 +315,7 @@ if (abc                >  other &&
     1                  == 1) {
     . . .
 }}}
-Also, use && / ~ instead of and / or keywords.
+Also, use && / || instead of and / or keywords.
 
 = Platform dependent code =
 
