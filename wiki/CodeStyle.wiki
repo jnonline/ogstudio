@@ -240,6 +240,23 @@ bool val = something(
     "wh");
 }}}
 
+== Conditionals ==
+No spaces inside parenthesis. The else keyword belongs on a new line. Space must always be present between if and open parenthesis, as well as between close parenthesis and open curly brace if you're using one:
+{{{
+if (condition) {
+    . . .
+} else if (. . .) {
+    . . .
+} else {
+    . . .
+}
+}}}
+No conditional may be written in one line. Even the simplest if statement must span 2 lines:
+{{{
+if (true)
+    doSomething();
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
