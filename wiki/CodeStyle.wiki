@@ -222,6 +222,24 @@ If the function is const, the const keyword should be on the same line as the la
 
 If some parameters are unused, comment out the variable name in the function definition, not declaration.
 
+== Function calls ==
+On one line if it fits; otherwise, wrap arguments at the parenthesis.
+{{{
+bool val = something(1.0);
+}}}
+If the arguments do not all fit on one line, they should be broken up onto multiple lines and aligned:
+{{{
+bool val = something(1.0,
+                     255.38);
+}}}
+If the function signature is so long that it cannot fit within the maximum line length, you may place all arguments on subsequent lines, aligned:
+{{{
+bool val = something(
+    1.0,
+    255.38,
+    "wh");
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
