@@ -212,7 +212,7 @@ Note:
  * There is never a space between the function name and the open parenthesis. 
  * There is never a space between the parentheses and the parameters. 
  * The open curly brace is always at the end of the same line as the last parameter. 
- * The close curly brace is either on the last line by itself or on the same line as the open curly brace if the definition is empty.
+ * The close curly brace is either on the last line by itself or on the same line as the open curly brace if the definition is empty, in which case curly braces are separated by 1 space.
  * There should be a space between the close parenthesis and the open curly brace. 
  * All parameters should be named, with identical names in the declaration and implementation. 
  * All parameters should be aligned if placed across several lines.
