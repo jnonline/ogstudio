@@ -190,14 +190,14 @@ void Class::function(int param) throw () {
     . . .
 }
 }}}
-If parameters don't fit, align them:
+If parameters don't fit, place them across several lines aligned:
 {{{
 void Class::method(const &param1,
                    int   param2) throw () {
     . . .
 }
 }}}
-If even the first parameter doesn't fit, start on the next line:
+If even the first parameter doesn't fit, start on the next line right away:
 {{{
 void Class::method(
     int param1,
