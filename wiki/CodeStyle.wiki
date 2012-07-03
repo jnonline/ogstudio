@@ -323,7 +323,7 @@ if (abc) {
 #ifdef DEBUG
     std::cout << "abc called\n";
 #endif
-    doSomething()
+    doSomething();
     . . .
 }}}
 
