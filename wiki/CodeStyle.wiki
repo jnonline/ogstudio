@@ -307,6 +307,16 @@ As for returning pointers/references, they should be placed adjacent to the type
 const char* str()
 }}}
 
+== Boolean expressions ==
+When boolean expression is longer than maximum line length, align variables and operators:
+{{{
+if (abc                >  other &&
+    somethingDifferent == r     &&
+    1                  == 1) {
+    . . .
+}}}
+Also, use && / ~ instead of and / or keywords.
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
