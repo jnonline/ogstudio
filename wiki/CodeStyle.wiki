@@ -265,7 +265,7 @@ for (StringList::iterator it = mList.begin(); it != mList.end(); ++it) {
     . . .
 }}}
 case blocks in switch statements should only have curly braces if it's required by compilator, i.e., to create a variable, and they should be placed like show below.
-switch statements should raise exception in default case in case unsupported value is provided.
+switch statements should raise exception in default case if unsupported value is provided.
 {{{
 switch (a) {
     case 1:
