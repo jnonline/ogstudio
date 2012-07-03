@@ -165,7 +165,7 @@ Every class definition should have an accompanying comment that describes what i
  *  sl.push_back("A bird,\ta mole");
  *  sl.push_back("A man without a cat");
  *  for (StringList::iterator it = sl.begin(); it != sl.end(); ++it)
- *      if (re.exec(*it))
+ *      if (re.match(*it))
  *          std::cout << *it << std::endl;
  *  \endcode
  *  The example will only print the first two lines.
