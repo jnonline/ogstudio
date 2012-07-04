@@ -328,7 +328,7 @@ if (abc) {
     . . .
 }}}
 
-== Preprocessor directives ==
+== Class format ==
 Sections in public, protected, private order.
 {{{
 class A: public B,
