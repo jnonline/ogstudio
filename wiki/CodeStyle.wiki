@@ -356,17 +356,18 @@ Note:
  * Do not put variables and methods into the first default private section following open curly brace. Only use it for macros.
 
 == Constructor initializer list ==
-Constructor initializer lists can be all on one line, aligned, or with subsequent lines indented 8 spaces.
+Constructor initializer lists can be all on one or several lines:
 {{{
 SomeClass::SomeClass(int value) : mValue(a) {
 . . .
 }}}
-Note the space from both sides of ":".
+(Note the space at both sides of ":")
 {{{
 OtherClass::OtherClass(int value, const char *string) : mValue(value),
                                                         mString(string) {
 . . .
 }}}
+If the list starts with subsequent line,  indent is 8 spaces:
 {{{
 Class::Class(int value, const char *string) :
         mValue(value),
