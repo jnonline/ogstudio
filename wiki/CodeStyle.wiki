@@ -340,11 +340,21 @@ class A: public B,
 
         void doSomething();
         bool isSomething() const;
+        void setSomething(const String &value);
 
     private:
         bool mIsSomething;
 };
 }}}
+Note:
+ * Base classes are aligned.
+ * DISALLOW_COPY_AND_ASSIGN is used to forbid copy and assignment constructors.
+ * Constructor and destructor are separated from public methods by a blank line.
+ * Methods are ordered by name.
+ * Each public, protected, private keyword is preceded by a blank line, unless it is the first section.
+ * Do not leave a blank line after these keywords.
+ * The public section should be first, followed by the protected and finally the private section.
+ * Do not put variables and methods into the first default private section following open curly brace. Only use it for macros.
 
 = Platform dependent code =
 
