@@ -349,7 +349,7 @@ Note:
  * Base classes are aligned.
  * DISALLOW_COPY_AND_ASSIGN is used to forbid copy and assignment constructors.
  * Constructor and destructor are separated from public methods by a blank line.
- * Methods are ordered by name in each section. The same order must be kept in source files.
+ * Methods are ordered by name in each section (public, protected, private). The same order must be kept in source files.
  * Each public, protected, private keyword is preceded by a blank line, unless it is the first section.
  * Do not leave a blank line after these keywords.
  * The public section should be first, followed by the protected and finally the private section.
