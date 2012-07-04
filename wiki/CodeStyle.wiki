@@ -375,6 +375,21 @@ Class::Class(int value, const char *string) :
 . . .
 }}}
 
+== Namespace formatting ==
+The contents of namespaces are not indented.
+{{{
+namespace aaa {
+namespace bbb {
+
+class A {
+    public:
+        A();
+};
+
+} // namespace bbb
+} // namespace aaa
+}}}
+
 = Platform dependent code =
 
 Functions that are platform dependent (#ifdef WIN32, etc) must contain the following Doxygen comment in header file:
