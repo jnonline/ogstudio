@@ -32,6 +32,10 @@ We use 0 for integers, pointers and chars.
 = sizeof =
 We use sizeof(struct) instead of sizeof(variable). I remember reading about it somewhere. If there's enough proof it's bad we can change it.
 
+= Boost =
+We don't use it, because it's big, complex, introduces additional dependencies and compile time increase.
+We believe that what Boost can do we can do ourselves, because we rarely need full fledged functionality that Boost offers. Take, e.g., FileSystem class. It's only several bytes in size, but offers us all we need from FileSystem on different platforms.
+
 = Naming =
 == General naming rules ==
 
