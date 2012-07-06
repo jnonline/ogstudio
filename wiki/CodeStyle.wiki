@@ -36,6 +36,9 @@ We use sizeof(struct) instead of sizeof(variable). I remember reading about it s
 We don't use it, because it's big, complex, introduces additional dependencies and compile time increase.
 We believe that what Boost can do we can do ourselves, because we rarely need full fledged functionality that Boost offers. Take, e.g., FileSystem class. It's only several bytes in size, but offers us all we need from FileSystem on different platforms.
 
+= C++11 =
+We do not use, and won't use it in MJIN2. GCC currently does not full support it, so we will only use something of C++11 one's it's supported for sometime by GCC.
+
 = Naming =
 == General naming rules ==
 
