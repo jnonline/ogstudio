@@ -14,6 +14,9 @@ We DO NOT use Hungarian ANYWHERE.
 = Work in constructors =
 Do not use virtual function calls, because the calls will not get dispatched to the subclass implementations.
 
+= Exceptions =
+We use them.
+
 = Naming =
 == General naming rules ==
 
