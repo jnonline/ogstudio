@@ -71,7 +71,7 @@ This wouldn't have happened if one would have typed variables manually each time
 = Naming =
 == General naming rules ==
 
-It's best to name correctly, unambiguously and without abbreviation if possible. Though, if file scope is pretty small, we don't mind abbreviations
+It's best to name correctly, unambiguously and without abbreviation if possible. Though, if file scope is pretty small, we don't mind abbreviations:
 {{{
 OGOFilmInfoPage *mFIP; // Ok in a small scope file.
 }}}
