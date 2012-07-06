@@ -6,7 +6,17 @@
 
 [http://code.google.com/p/ogstudio/issues/detail?id=462 Original issue]
 
-All listed requirements either add new requirements, or override existing ones of [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml Google C++ style guide]. Therefore you should first read Google C++ style guide.
+Requirements are based on [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml Google C++ style guide]. You are advised to read it too.
+
+= Define guards =
+Format:
+{{{
+<PATH>_<FILE>_H
+}}}
+E.g., mjin2/FileSystem.h:
+{{{
+#define MJIN2_FILE_SYSTEM_H
+}}}
 
 = Hungarian notation =
 We DO NOT use Hungarian ANYWHERE.
