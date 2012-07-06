@@ -324,7 +324,7 @@ Loops should use prefix ++ operator, because otherwise temporary variable is cre
 for (StringList::iterator it = mList.begin(); it != mList.end(); ++it) {
     . . .
 }}}
-case blocks in switch statements should only have curly braces if it's required by compilator, i.e., to create a variable, and they should be placed like show below.
+case blocks in switch statements should only have curly braces if it's required by compilator, i.e., to create a variable, and they should be placed like shown below.
 switch statements should raise exception in default case if unsupported value is provided.
 {{{
 switch (a) {
