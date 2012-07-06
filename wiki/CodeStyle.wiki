@@ -8,6 +8,13 @@
 
 All listed requirements either add new requirements, or override existing ones of [http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml Google C++ style guide]. Therefore you should first read Google C++ style guide.
 
+= No Hungarian notation =
+We DO NOT use Hungarian ANYWHERE.
+
+= Classes =
+== Doing work in constructors ==
+Do not use virtual function calls, because the call will not get dispatched to the subclass implementations.
+
 = Naming =
 == General naming rules ==
 
