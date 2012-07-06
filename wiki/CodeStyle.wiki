@@ -111,8 +111,8 @@ typedef std::vector<Item> Items;
 Enums:
 {{{
 enum TILE_STATE {
-  TILE_STATE_MOVING,
-  TILE_STATE_HIDING
+    TILE_STATE_MOVING,
+    TILE_STATE_HIDING
 };
 }}}
 
@@ -135,14 +135,14 @@ int localVariable;
 }}}
 {{{
 struct BinFormat {
-  int           formatVersion;
-  unsigned char formatMagic;
+    int           formatVersion;
+    unsigned char formatMagic;
 };
 }}}
 {{{
 class TileStateMoving {
-  private:
-    int mMemberVariable;
+    private:
+      int mMemberVariable;
 };
 }}}
 {{{
@@ -163,8 +163,8 @@ void doSomethingSpecial()
 }}}
 {{{
 class SomethingSpecial {
-  public:
-    void doItNow();
+    public:
+      void doItNow();
 };
 }}}
 
