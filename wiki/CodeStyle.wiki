@@ -22,6 +22,10 @@ E.g., mjin2/FileSystem.h:
  # MJIN2
  # The rest.
 
+= Visibility scope =
+
+Do not use 'using' keyword anywhere, even in source files. Keeping namespace names simplifies understanding where certain thing comes from. It also helps to grep contents.
+
 = Hungarian notation =
 We DO NOT use Hungarian ANYWHERE.
 
