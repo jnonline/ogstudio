@@ -18,6 +18,10 @@ E.g., mjin2/FileSystem.h:
 #define MJIN2_FILE_SYSTEM_H
 }}}
 
+= Header inclusion order =
+ # MJIN2
+ # The rest.
+
 = Hungarian notation =
 We DO NOT use Hungarian ANYWHERE.
 
