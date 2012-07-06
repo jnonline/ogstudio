@@ -17,6 +17,12 @@ Do not use virtual function calls, because the calls will not get dispatched to 
 = Exceptions =
 We use them.
 
+= Use of const =
+Class methods that return pointers / references must NOT be declared const just because they don't modify the value. The value can be modified by the caller since it gets pointer / reference.
+
+= Integer types =
+We use u8, u16, u32, u64, s8, s16, s32, s64 instead of char, int, short, long long to save on typing and support different platforms (32-bit, 64-bit).
+
 = Naming =
 == General naming rules ==
 
