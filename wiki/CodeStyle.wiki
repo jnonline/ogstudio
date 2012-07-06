@@ -26,6 +26,9 @@ We use u8, u16, u32, u64, s8, s16, s32, s64 instead of char, int, short, long lo
 = Preprocessor macros =
 We use them for very commonly used constructs to save on typing, like MJIN2_EXCEPTION, MJIN2_LOG, MJIN2_STR.
 
+= 0 and NULL =
+We use 0 for integers, pointers and chars.
+
 = Naming =
 == General naming rules ==
 
