@@ -23,7 +23,6 @@ E.g., mjin2/FileSystem.h:
  # The rest.
 
 = Visibility scope =
-
 Do not use 'using' keyword anywhere, even in source files. Keeping namespace names simplifies understanding where certain thing comes from. It also helps to grep contents.
 
 = Hungarian notation =
@@ -55,7 +54,7 @@ We don't use it, because it's big, complex, introduces additional dependencies a
 We believe that what Boost can do we can do ourselves, because we rarely need full fledged functionality that Boost offers. Take, e.g., FileSystem class. It's only several bytes in size, but offers us all we need from FileSystem on different platforms.
 
 = C++11 =
-We do not use, and won't use it in MJIN2. GCC currently does not fully support it, so we will only use something of C++11 one's it's supported for sometime by GCC.
+We won't use it in MJIN2, because GCC doesn't offer complete support of it yet.
 E.g., I've implemented RegExp class in MJIN2 using PCRE, because at the time of writing, July 2012, GCC does not support C++11 regex.
 
 = Autocompletion =
