@@ -12,7 +12,7 @@ All listed requirements either add new requirements, or override existing ones o
 We DO NOT use Hungarian ANYWHERE.
 
 = Work in constructors =
-Do not use virtual function calls, because the call will not get dispatched to the subclass implementations.
+Do not use virtual function calls, because the calls will not get dispatched to the subclass implementations.
 
 = Naming =
 == General naming rules ==
