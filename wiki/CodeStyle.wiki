@@ -142,7 +142,7 @@ struct BinFormat {
 {{{
 class TileStateMoving {
     private:
-      int mMemberVariable;
+        int mMemberVariable;
 };
 }}}
 {{{
@@ -164,7 +164,7 @@ void doSomethingSpecial()
 {{{
 class SomethingSpecial {
     public:
-      void doItNow();
+        void doItNow();
 };
 }}}
 
