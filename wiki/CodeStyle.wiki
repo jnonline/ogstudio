@@ -40,6 +40,17 @@ We believe that what Boost can do we can do ourselves, because we rarely need fu
 We do not use, and won't use it in MJIN2. GCC currently does not fully support it, so we will only use something of C++11 one's it's supported for sometime by GCC.
 E.g., I've implemented RegExp class in MJIN2 using PCRE, because at the time of writing, July 2012, GCC does not support C++11 regex.
 
+= Autocompletion =
+It is considered 'bad', because it propagates your errors.
+
+At work I saw the following example:
+{{{
+DEBUG_INFO_FOUR("timePlayChannel",playChannelTime.toString().toStdString(),"mSec",playChannelTime.msec());
+DEBUG_INFO_FOUR("timeStertChannel",startChanelTime.toString().toStdString(),"mSec",startChanelTime.msec());
+}}}
+As you see, names of variables differ and they are even misspelled.
+This wouldn't have happened if one would have typed variables manually each time.
+
 = Naming =
 == General naming rules ==
 
