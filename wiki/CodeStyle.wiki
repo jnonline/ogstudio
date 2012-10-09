@@ -99,10 +99,12 @@ endian.h // For endian convertions
 
 Classes, structs, typedefs:
 {{{
-class TileStateMoving {
+class TileStateMoving
+{
 };
 
-struct Item {
+struct Item
+{
 };
 
 typedef std::vector<Item> Items;
@@ -110,7 +112,8 @@ typedef std::vector<Item> Items;
 
 Enums:
 {{{
-enum TILE_STATE {
+enum TILE_STATE
+{
     TILE_STATE_MOVING,
     TILE_STATE_HIDING
 };
@@ -134,13 +137,15 @@ Global variables start with 'g' and then camel case.
 int localVariable;
 }}}
 {{{
-struct BinFormat {
+struct BinFormat
+{
     int           formatVersion;
     unsigned char formatMagic;
 };
 }}}
 {{{
-class TileStateMoving {
+class TileStateMoving
+{
     private:
         int mMemberVariable;
 };
@@ -162,7 +167,8 @@ Function names use camel case and should be verbs:
 void doSomethingSpecial()
 }}}
 {{{
-class SomethingSpecial {
+class SomethingSpecial
+{
     public:
         void doItNow();
 };
@@ -175,9 +181,11 @@ So far they are lowercase and one word long.
 Each namespace is represented by a directory in project structure:
 {{{
 
-namespace mj {
+namespace mj
+{
 
-class Application {
+class Application
+{
 };
 
 } // namespace mj
@@ -231,7 +239,8 @@ Every class definition should have an accompanying comment that describes what i
  *  The example will only print the first two lines.
  *  The third one doesn't match the specified regular expression.
  */
-class RegExp {
+class RegExp
+{
 }}}
 
 = Formatting =
@@ -246,14 +255,16 @@ Only use spaces. Tab = 4 spaces.
 == Function declarations and definitions ==
 Return type on the same line as function name, parameters on the same line if they fit:
 {{{
-void Class::function(int param) throw () {
+void Class::function(int param) throw ()
+{
     . . .
 }
 }}}
 If parameters don't fit, place them across several lines aligned:
 {{{
 void Class::method(const &param1,
-                   int   param2) throw () {
+                   int   param2) throw ()
+{
     . . .
 }
 }}}
@@ -261,7 +272,8 @@ If even the first parameter doesn't fit, start on the next line right away:
 {{{
 void Class::method(
     int param1,
-    int param2) throw (std::exception) {
+    int param2) throw (std::exception)
+{
     . . .
 }
 }}}
@@ -271,7 +283,7 @@ Note:
  * The open parenthesis is always on the same line as the function name. 
  * There is never a space between the function name and the open parenthesis. 
  * There is never a space between the parentheses and the parameters. 
- * The open curly brace is always at the end of the same line as the last parameter. 
+ * The open curly brace is always on its own line or at the end of the same line as the last parameter only if the definition is empty.
  * The close curly brace is either on the last line by itself or on the same line as the open curly brace if the definition is empty, in which case curly braces are separated by 1 space.
  * There should be a space between the close parenthesis and the open curly brace. 
  * All parameters should be named, with identical names in the declaration and implementation. 
@@ -301,13 +313,18 @@ bool val = something(
 }}}
 
 == Conditionals ==
-No spaces inside parenthesis. The else keyword belongs on a new line. Space must always be present between if and open parenthesis, as well as between close parenthesis and open curly brace if you're using one:
+No spaces inside parenthesis. The else keyword belongs on a new line. Space must always be present between if and open parenthesis:
 {{{
-if (condition) {
+if (condition)
+{
     . . .
-} else if (. . .) {
+}
+else if (. . .)
+{
     . . .
-} else {
+}
+else
+{
     . . .
 }
 }}}
@@ -321,17 +338,20 @@ if (true)
 
 Loops should use prefix ++ operator, because otherwise temporary variable is created to hold return value each cycle iteration:
 {{{
-for (StringList::iterator it = mList.begin(); it != mList.end(); ++it) {
+for (StringList::iterator it = mList.begin(); it != mList.end(); ++it)
+{
     . . .
 }}}
 case blocks in switch statements should only have curly braces if it's required by compilator, i.e., to create a variable, and they should be placed like shown below.
 switch statements should raise exception in default case if unsupported value is provided.
 {{{
-switch (a) {
+switch (a)
+{
     case 1:
         b = a;
         break;
-    case 2: {
+    case 2:
+    {
         RegExp re("abc");
         if (re.match("Wow"))
             b = a - 1;
@@ -372,7 +392,8 @@ When boolean expression is longer than maximum line length, align variables and 
 {{{
 if (abc                >  other &&
     somethingDifferent == r     &&
-    1                  == 1) {
+    1                  == 1)
+{
     . . .
 }}}
 Also, use &&, ||, etc. instead of and, or, etc. keywords.
@@ -380,7 +401,8 @@ Also, use &&, ||, etc. instead of and, or, etc. keywords.
 == Preprocessor directives ==
 # is always put at the beginning of the line:
 {{{
-if (abc) {
+if (abc)
+{
 #ifdef DEBUG
     std::cout << "abc called\n";
 #endif
@@ -391,7 +413,8 @@ if (abc) {
 == Class format ==
 {{{
 class A: public B,
-         public C {
+         public C
+{
     DISALLOW_COPY_AND_ASSIGN(A);
     public:
         A();
@@ -418,30 +441,36 @@ Note:
 == Constructor initializer list ==
 Constructor initializer lists can be all on one or several lines:
 {{{
-SomeClass::SomeClass(int value) : mValue(a) {
+SomeClass::SomeClass(int value) : mValue(a)
+{
 . . .
 }}}
 (Note the space at both sides of ":")
 {{{
 OtherClass::OtherClass(int value, const char *string) : mValue(value),
-                                                        mString(string) {
+                                                        mString(string)
+{
 . . .
 }}}
 If the list starts with subsequent line,  indent is 8 spaces:
 {{{
 Class::Class(int value, const char *string) :
         mValue(value),
-        mString(string) {
+        mString(string)
+{
 . . .
 }}}
 
 == Namespace formatting ==
 The contents of namespaces are not indented.
 {{{
-namespace aaa {
-namespace bbb {
+namespace aaa
+{
+namespace bbb
+{
 
-class A {
+class A
+{
     public:
         A();
 };
