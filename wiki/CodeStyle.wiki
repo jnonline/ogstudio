@@ -485,3 +485,14 @@ Functions that are platform dependent (#ifdef WIN32, etc) must contain the follo
 {{{
 //! Platform dependent implementation.
 }}}
+
+= AStyle options to ease conformance to the style =
+{{{
+--style=allman
+--indent-classes
+--indent-switches
+--indent-col1-comments
+--pad-oper
+--pad-header
+--align-pointer=name
+}}}
