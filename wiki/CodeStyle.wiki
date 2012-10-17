@@ -54,8 +54,7 @@ We don't use it, because it's big, complex, introduces additional dependencies a
 We believe that what Boost can do we can do ourselves, because we rarely need full fledged functionality that Boost offers. Take, e.g., FileSystem class. It's only several bytes in size, but offers us all we need from FileSystem on different platforms.
 
 = C++11 =
-We won't use it in MJIN2, because GCC doesn't offer complete support of it yet.
-E.g., I've implemented RegExp class in MJIN2 using PCRE, because at the time of writing, July 2012, GCC does not support C++11 regex.
+Everything supported by GCC 4.6 can be used, but with caution, because headers are processed by SWIG too. So only those C++11 features should be used in headers, that do not conflict with SWIG. Also, MJIN2 strives to be as simple as possible (at least from header perspective) since things like templates can't be done in target languages.
 
 = Autocompletion =
 It is considered 'bad', because it propagates your errors.
