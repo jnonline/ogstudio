@@ -20,7 +20,15 @@ E.g., mjin2/FileSystem.h:
 
 = Header inclusion order =
  # MJIN2
- # The rest.
+ # <blank line>
+ # The rest
+
+{{{
+#include <mjin2/Application.h>
+#include <mjin2/Window.h>
+
+#include <stdexcept>
+}}}
 
 = Visibility scope =
 Do not use 'using' keyword anywhere, even in source files. Keeping namespace names simplifies understanding where certain thing comes from. It also helps to grep contents.
