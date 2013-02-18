@@ -461,13 +461,18 @@ OtherClass::OtherClass(int value, const char *string) : mValue(value),
 {
 . . .
 }}}
-If the list starts with subsequent line,  indent is 8 spaces:
+If the list starts with subsequent line,  indent is 4 spaces:
 {{{
 Class::Class(int value, const char *string) :
         mValue(value),
         mString(string)
 {
 . . .
+}}}
+
+Empty constructor body should be placed this way:
+{{{
+Class::Class() : mA(1) { }
 }}}
 
 == Namespace formatting ==
