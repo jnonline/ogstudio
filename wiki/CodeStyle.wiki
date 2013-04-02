@@ -434,6 +434,8 @@ class A: public B,
         void setSomething(const String &value);
 
     private:
+        void doIt();
+        
         bool mIsSomething;
 };
 }}}
@@ -446,6 +448,7 @@ Note:
  * Do not leave a blank line after these keywords.
  * The public section should be first, followed by the protected and finally the private section.
  * Do not put variables and methods into the first default private section following open curly brace. Only use it for macros.
+ * If a section has both methods and variables, there's no need to duplicated the section: first, place methods inside the section, then a blank line, then the variables; see the private section in the example above.
 
 == Constructor initializer list ==
 Constructor initializer lists can be all on one or several lines:
