@@ -424,7 +424,7 @@ if (abc)
 class A: public B,
          public C
 {
-    DISALLOW_COPY_AND_ASSIGN(A);
+        DISALLOW_COPY_AND_ASSIGN(A);
     public:
         A();
         ~A();
