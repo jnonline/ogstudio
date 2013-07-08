@@ -421,8 +421,8 @@ if (abc)
 
 == Class format ==
 {{{
-class A: public B,
-         public C
+class A : public B,
+          public C
 {
         DISALLOW_COPY_AND_ASSIGN(A);
     public:
